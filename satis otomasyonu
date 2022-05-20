@@ -1,0 +1,61 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main( ) {
+      	int sifre,secim,tutar;
+		float ekindirim,indirim;
+		string ad="firma";
+		cout<<"lutfen kulanici adini girin";cin>>ad;
+		cout<<"lutfen sifrenizi girin";cin>>sifre;
+		if(ad=="firma" && sifre==321)
+		{
+			cout<<"giris basarili";
+			
+			cout<<"kartiniz varsa lutfen 1'e basiniz";cin>>secim;
+			cout<<endl;
+			cout<<"lutfen alısveris tutarını girin";cin>>tutar;
+			if(secim==1)
+			{
+				if(tutar>=300)
+				{
+					indirim=tutar-(tutar*20/100);
+					ekindirim=indirim-(indirim*3/100);
+				}
+				else if(tutar>=200)
+				{
+					indirim=tutar-(tutar*15/100);
+					ekindirim=indirim-(indirim*3/100);
+				}
+				else if(tutar>=100)
+				{
+					indirim=tutar-(tutar*10/100);
+					ekindirim=indirim-(indirim*3/100);
+				}
+				cout<<"odemeniz gereken tutar:"<<ekindirim;
+			}
+			if(secim==0)
+			{
+				if(tutar>=300)
+				{
+					indirim=tutar-(tutar*20/100);
+				}
+					else if(tutar>=200)
+				{
+					indirim=tutar-(tutar*15/100);
+					
+				}
+				else if(tutar>=100)
+				{
+					indirim=tutar-(tutar*10/100);
+					
+				}
+				cout<<"odemeniz gereken tutar:"<<indirim;
+		 	}
+		}		
+		else 
+		cout<<"programdan atildiniz";		
+				 
+	return 0;
+}
