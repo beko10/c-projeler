@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string.h> 
+ using namespace std;
+//karakter dizileri  
+ void yaz(char dizi[][30],int boyut)
+ {
+ 	for(int i=0;i<boyut;i++)
+ 	{
+ 		cout<<dizi[i]<<" ";
+	 }
+ }
+
+int main() {
+  char isim[5][30]={"berkay","hasan","ali","veli","elma"};
+    yaz(isim,5);cout<<endl;
+    cout<<isim[0]<<endl; //ramde berkay olan yeri çikti olarak verir
+    cout<<isim[0][3]; //berkay isiminin 3. indisini basar yani k 
+	return 0;
+}
