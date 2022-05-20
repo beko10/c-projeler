@@ -1,0 +1,30 @@
+include <iostream>
+
+using namespace std;
+
+class sayilar 
+{
+	int sayi;
+	public:
+	 void atama_yap(int x)//atama fonksiyonu gelen sayiyi x değişkeninde tutup
+	 {
+	 	sayi=x;//x değişkenindeki degeri sayi degişkenine atandi
+	 }
+	 void goster()//atanan degeri gostern fonk
+	 {
+	 	cout<<sayi<<endl;
+	 }
+};
+
+
+int main() {
+sayilar sayi1;//sayilar sinifindan sayi1 adinda nesne olusturuldu
+int s;//kullanicidan atama degeri yapmak için s değişkeni olusturuldu
+cout<<"lutfen bir sayi girin:";cin>>s;
+//sayi1.atama_yap(100);//ele ile atama yapildi
+//sayi1.goster();
+sayi1.atama_yap(s);//kullanicidan alinan s sayisi fonksiyona gonderilidi ve sayi degiskenşne atandi
+sayi1.goster();//kullanicidan alinan s sayisi yazdirildi
+system("pause ");
+	return 0;
+}
