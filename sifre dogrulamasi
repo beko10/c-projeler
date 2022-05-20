@@ -1,0 +1,45 @@
+#include <iostream>
+//sifre dogrulamasi
+using namespace std;
+
+
+
+int main() {
+ 
+ string sifre;
+ string sifre_dogrulama;
+ 
+ int i;
+ bool dogru;
+while(true)
+ {
+ 	i=0;
+ 	dogru=1;
+ 	cout<<"lutfen sifrenizi girin:";
+ 	cin>>sifre;
+ 	cout<<"lutfen sifrenizi tekrar girin:";
+ 	cin>>sifre_dogrulama;
+ 	while(!(sifre[i]=='\0'&&sifre_dogrulama[i]=='\0'))
+ 	{
+ 		if(sifre[i]!=sifre_dogrulama[i])
+ 		{
+ 			cout<<"yanlis giris yaptiniz...";
+ 			dogru=0;
+ 			break;
+		 }
+		 else
+		 {
+		 	i++;
+		 }
+	 }
+	 if(dogru==1)
+	 {
+	 	cout<<"sifreler dogru";
+	 	break;
+	 	
+	 }
+ }
+ 
+
+	return 0;
+}
