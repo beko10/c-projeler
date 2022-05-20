@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+
+//ad gizleme
+
+int main() {
+    
+    string isim;
+    cin>>isim;
+    int x=isim.length();
+		
+		cout<<isim[0];
+		for(int i=1;i<x;i++)
+		cout<<" * ";
+	return 0;
+}
+/////////////////////
+#include <iostream>
+
+using namespace std;
+
+//ad gizleme fonk
+void isimGizle(string ism)
+{
+	int x=ism.length();
+	cout<<ism[0];
+	for(int i=1;i<x;i++)
+	cout<<" * ";
+ 	
+     /*	while(i<x)
+	{
+		cout<<" * ";
+		i++;
+	}*/
+
+
+}
+int main() {
+ string isim;
+ cin>>isim;
+ isimGizle(isim);
+	return 0;
+}
