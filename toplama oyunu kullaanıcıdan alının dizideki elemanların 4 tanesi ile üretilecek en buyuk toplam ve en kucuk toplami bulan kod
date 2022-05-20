@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+ // toplama oyunu kullaanıcıdan alının dizideki elemanların 4 tanesi ile üretilecek en buyuk toplam ve en kucuk toplami bulan kod 
+	cout<<"Lutfen Dizinizin Eleman Sayisiniz Giriniz";cin>>dizielemani;
+int main(){
+	int dizielemani,a[dizielemani],toplam=0;
+	for(int i=0;i<dizielemani;i++)
+	{
+		cout<<"a("<<i<<")=";cin>>a[i];
+		
+		toplam+=a[i];
+		
+	}
+	
+	cout<<"Girdiginiz Dizideki Elemanlar Toplami="<<toplam<<endl;
+	int enbuyuk=a[0];
+     for(int i=0;i<dizielemani;i++)
+     {
+     	if(a[i]>enbuyuk) 
+		 {
+		 	enbuyuk=a[i];
+		 }
+		 
+	 }
+	cout<<"Dizideki En Buyuk Eleman Sayisi= "<<enbuyuk<<endl;
+	
+	int enkucuk=a[0];
+     for(int i=0;i<dizielemani;i++)
+     {
+     	if(a[i]<enkucuk) 
+		 {
+		 	enkucuk=a[i];
+		 }
+		 
+	 }
+	cout<<"Dizidekei En Kucuk Eleman Sayisi="<<enkucuk<<endl;
+	cout<<"--------------------------------------------------"<<endl;
+	cout<<" Girdiginiz Dizideki En Buyuk Toplam="<<toplam-enkucuk<<endl;
+	cout<<"Girdiginiz Dizideki En Kucuk Toplam="<<toplam-enbuyuk;
+	return 0;	
+}
