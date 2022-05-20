@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int main() {
+ string isim="berkay";
+ cout<<"isim="<<isim<<endl;
+ cout<<"isim stringi'nin bellekteki adresi="<<&isim<<endl;
+ string *ptr;
+ ptr=&isim;
+ cout<<"pointer in gosterdigi degerin belekteki adresi="<<ptr<<endl;
+ cout<<"pointer in bellekte gosterdigi deger="<<*ptr<<endl;
+ cout<<"pointer in bellekteki adresi"<<&ptr;
+return 0;
+    
+}
