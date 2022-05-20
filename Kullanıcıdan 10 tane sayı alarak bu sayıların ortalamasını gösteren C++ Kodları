@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+// Kullanıcıdan 10 tane sayı alarak bu sayıların ortalamasını gösteren C++ Kodları 
+int main( ) {
+	int sayi,toplam=0;
+	for(int i=1;i<=10;i++)
+	{
+		cout<<i<<". sayiyi giriniz:";
+		cin>>sayi;
+		toplam+=sayi;
+	}
+	cout<<"girdiginiz sayilarin ortalamasi="<<(float)toplam/10;
+		return 0;
+	}
