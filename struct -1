@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+
+struct hava 
+{
+	float sicaklik;
+	float nem;
+	float ruzgar;
+}havad;
+int main() {
+    cout<<"lutfen bugunku sicakligi girin:";cin>>havad.sicaklik;cout<<endl;
+    cout<<"lutfen bugunku nem oranini girin:";cin>>havad.nem;cout<<endl;
+    cout<<"lutfen bugunku ruzgar sidetini girin:";cin>>havad.ruzgar;cout<<endl;
+    
+	
+	
+	return 0;
+}
