@@ -1,0 +1,125 @@
+#include <iostream>
+#include <conio.h>
+#include <stdlib.h>
+#include <time.h>
+ // tas kagit makas oyunu
+using namespace std;
+ 
+int main()
+{
+int pc,secim,tas=1,kagit=2,makas=3;
+int insan=0,bilgisayar=0,beraber=0,gecerliel=0,gecersizel=0;
+
+cout<<"cikmak icn -1 basin"<<endl;
+while(true)
+{
+	
+srand(time(NULL));
+pc=rand()%3+1;
+
+
+cout<<"Tas:1-Kagit:2-Makas:3  "<<endl;
+	cin>>secim;
+
+if(secim==1 && pc==1)
+{
+	cout<<"durum beraber "<<endl;
+	beraber++;
+	gecerliel++;
+}
+if(secim==2 && pc==2)
+{
+	cout<<"durum beraber "<<endl;
+	beraber++;
+	gecerliel++;
+}
+if(secim==3 && pc==3)
+{
+	cout<<"durum beraber "<<endl;
+	beraber++;
+	gecerliel++;
+}
+else if(secim==1 && pc==2)
+{
+	cout<<"bilgisayar kazandi"<<endl;
+	bilgisayar++;
+	gecerliel++;
+}
+else if(secim==1 && pc==3)
+{
+	cout<<"insan kazandi"<<endl;
+	insan++;
+	gecerliel++;
+}
+else if(secim==2 && pc==1)
+{
+	cout<<"insan kazandi"<<endl;
+	insan++;
+	gecerliel++;
+}
+else if(secim==2 && pc==3)
+{
+	cout<<"bilgisayar kazandi"<<endl;
+	bilgisayar++;
+	gecerliel++;
+}
+else if(secim==3 && pc==1)
+{
+	cout<<"bilgisar kazandi"<<endl;
+	bilgisayar++;
+	gecerliel++;
+}
+else if(secim==3 && pc==2)
+{
+	cout<<"insan kazandi"<<endl;
+	insan++;
+	gecerliel++;
+}
+if(secim>3 )
+{
+	cout<<"yanlis secim yaptiniz"<<endl;
+     gecersizel++;
+}
+else if(secim<-1)
+{
+	cout<<"yanlis secim yaptiniz"<<endl;
+	gecersizel++;
+}
+cout<<"---------------------------------"<<endl;
+
+	if(secim == -1)
+	{
+		cout<<"oyundan ciktiniz...."<<endl;
+		cout<<"----------------------------------"<<endl<<endl;
+cout<<"***OYUN ICI ISTATISTIKLER***"<<endl;
+cout<<"oyunun kazani:";
+if(insan>bilgisayar)
+{
+	cout<<"insan kazandi"<<endl;
+}
+else if(bilgisayar>insan)
+{
+	cout<<"bilgisayar kazandi"<<endl;
+}
+else 
+{
+cout<<"!!!kazanan yok!!!"<<endl;
+}
+
+
+cout<<"insan kazandigi el sayisi="<<insan<<endl;
+cout<<"bilgisayar kazandigi el sayisi="<<bilgisayar<<endl;
+cout<<"berabere biten el sayisi="<<beraber<<endl;
+cout<<"gecerli el sayisi="<<gecerliel<<endl;
+cout<<"gecersiz el sayisi"<<gecersizel<<endl;
+	   exit(0);
+	}
+
+	
+}
+
+system("pause");
+system("cls");
+
+return 0;
+}
