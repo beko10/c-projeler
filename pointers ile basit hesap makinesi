@@ -1,0 +1,64 @@
+#include <iostream>
+//pointerlarla dört islem 
+using namespace std;
+float topla(float *sayi1,float *sayi2)
+{
+	float sonuc;
+	sonuc=*sayi1+ *sayi2;
+	return sonuc;
+}
+float cikarma(float *sayi1,float *sayi2)
+{
+	return *sayi1-*sayi2;
+}
+float carpma (float *sayi1 ,float *sayi2)
+{
+	return *sayi1*(*sayi2);
+}
+float bolme (float *sayi1 ,float *sayi2)
+{
+	float sonuc;
+	sonuc = *sayi1 / (*sayi2);
+	return sonuc;
+}
+int main( ) {
+     float s1,s2;
+      int secim;
+     float toplam,cikarmasonucu;
+     	float carpmasonucu;
+     basadon:    cout<<"lutfen birinci sayiyi girin:";cin>>s1;
+     cout<<"lutfen ikinci sayiyi girin:";cin>>s2;
+     cout<<"lutfen asagidaki islemlerden birini seciniz..."<<endl;
+     cout<<"1:toplama \n";
+     cout<<"2:cikarma \n";
+     cout<<"3:carpma \n";
+     cout<<"4:bolme \n";
+    cin>>secim;
+     switch(secim)
+     {
+     	    case 1:
+    	 toplam=topla(&s1,&s2);
+    	 cout<<"toplam sonucu="<<toplam<<endl;
+            break;
+    
+	 case 2:
+    	cout<<"cikarma sonucu="<<cikarma(&s1,&s2)<<endl;
+    	break;
+    	case 3:
+    	 carpmasonucu=carpma(&s1,&s2);
+    		cout<<"carpma sonucu="<<carpmasonucu<<endl;
+    		break;
+    		
+    		case 4:
+             cout<<"bolme sonucu="<<bolme(&s1,&s2);
+			 break;
+			 
+			 default:
+			 cout<<"yanlis secim yaptiniz"<<endl;
+			  goto basadon;
+			 break;	
+		
+	 }
+			
+	return 0;
+}
