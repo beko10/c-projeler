@@ -1,0 +1,79 @@
+#include <iostream>
+#include <conio.h>
+#include <stdlib.h>
+#include <time.h>
+ // zar oyunu
+using namespace std;
+ 
+int main()
+{
+	int n,a[n],b[n],skor=0,kazanan1=0,kazanan2=0,berabere=0;
+	cout<<"kac kere zar atilsin"<<endl;
+	cin>>n;
+srand(time(NULL));
+for(int i=0;i<n;i++)
+{
+	int z1=rand()%6+1;
+	int z2=rand()%6+1;
+	a[i]=z1;
+	b[i]=z2;
+	if(z1>z2)
+	{
+		skor++;
+		kazanan1++;
+		
+	}
+	else if(z2>z1)
+	{
+		skor--;
+		kazanan2++;
+	}
+	else 
+	{
+		berabere++;
+	}
+
+	
+}
+cout<<"a[n] dizisi=";
+for(int i=0;i<n;i++)
+{
+	cout<<a[i]<<" ";
+	
+}
+cout<<endl;
+cout<<"b[n] dizisi=";
+for(int i=0;i<n;i++)
+{
+	cout<<b[i]<<" ";
+}
+cout<<endl;
+cout<<"oyunun kazanani:";
+if(skor>0)
+{
+	cout<<"1 kazandi"<<endl;
+}
+else if (skor<0)
+{
+	cout<<"2 kazandi"<<endl;
+}
+else 
+{
+	cout<<"berabere"<<endl;
+}
+cout<<"oyuncu 1 in kaznadgi el sayisi:"<<kazanan1<<endl;
+cout<<"oyuncu 2 nin kaznadgi el sayisi:"<<kazanan2<<endl;
+cout<<"berabere biten ele sayisi:"<<berabere<<endl;
+system("pause");
+cout<<"tekrar zar atmek icin 1 ' e cikmak icin herhangi bir  basin"<<endl;
+int secim;
+cin>>secim;
+if(secim==1)
+{
+	main();
+}
+else 
+cout<<"oyundan ciktiniz....";
+exit(0);
+return 0;
+}
