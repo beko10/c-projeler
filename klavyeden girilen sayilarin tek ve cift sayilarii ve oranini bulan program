@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+//klavyeden girilen sayilarin tek ve cift sayilarii ve oranini bulan program	
+
+int main( ) {
+    int sayiadedi,teks=0,cifts=0;
+     cout<<"kac adet sayi girmek istediginizi girin";cin>>sayiadedi;
+    
+    for(int i=0;i<sayiadedi;i++)
+    {
+         int sayi;
+		 cout<<i+1<<". sayiyi girin";cin>>sayi;
+    	
+    	if(sayi%2==0)
+    	{
+    		cifts++;
+		}
+		else
+		teks++;
+		
+	}
+	cout<<"cift sayi sayisi"<<cifts<<endl;
+	cout<<"tek sayi sayisi"<<teks<<endl;
+	cout<<"cifte sayilarin orani:"<<(float)cifts/sayiadedi<<endl;
+	cout<<"tek sayiklarin orani:"<<(float)teks/sayiadedi<<endl;
+		return 0;
+	}
