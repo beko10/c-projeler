@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+// 1 den n e kadar olan çift sayilarin toplamini bulan program
+int main() {
+	int sondeger,toplam=0;
+	cout<<"lutfen son degeri giriniz...";cin>>sondeger;
+	for(int i=1;i<=sondeger;i++)
+	{
+		if(i%2==0)
+		toplam=toplam+i;
+	}
+	cout<<" 2 den "<<sondeger<<" e kadar olan cift sayilarin toplami="<<toplam;
+}
+}
