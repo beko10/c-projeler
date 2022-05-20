@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+class insanlar
+{
+	public:
+		string isim;
+		int yas;
+		void yaz()
+		{
+			cout<<isim<<" "<<yas;
+		}
+};
+
+
+int main() {
+insanlar insan1;
+insan1.isim="berkay";
+    insan1.yas=20;
+	insan1.yaz();    
+   //cout<<insan1.isim<<endl;
+   //cout<<insan1.yas;
+	return 0;
+}
