@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+void bubblesort(int dizi[],int boyut)
+{
+	for(int i=0;i<boyut;i++)
+	{
+		for(int j=1;j<boyut;j++)
+		{
+			if(dizi[j-1]>dizi[j])
+			{
+				int temp=dizi[j];
+				dizi[j]=dizi[j-1];
+				dizi[j-1]=temp;
+			}
+		}
+	}
+}
+
+int main() {
+int boyut;
+cout<<"lutfen dizinizin eleman sayisini girin:";
+cin>>boyut;
+int tamsayidizisi[boyut];
+for(int i=0;i<boyut;i++)
+{
+	cout<<"dizi("<<i<<")=";
+	cin>>tamsayidizisi[i];
+}
+cout<<"siralamdan once:";
+for(int i=0;i<boyut;i++)
+{
+	cout<<tamsayidizisi[i]<<" ";
+}
+cout<<endl;
+bubblesort(tamsayidizisi,boyut);
+cout<<"siralamdan sonra:";
+for(int i=0;i<boyut;i++)
+{
+	cout<<tamsayidizisi[i]<<" ";
+}
+	return 0;
+}
