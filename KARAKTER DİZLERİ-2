@@ -1,0 +1,36 @@
+karakter diziler
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	
+	 char ogrenci[4][20]={"berkay",
+	 "hasan","ali","veli"};
+	 for(int i=0;i<4;i++)
+	 {
+	   for(int j=0;j<20;j++)
+	   {
+	   	cout<<ogrenci[i][j];
+	   }
+	  cout<<endl;
+	 }
+	 
+	 cout<<"------------------------------"<<endl;
+	 
+	  for(int i=0;i<4;i++)
+	 {
+	   for(int j=0;j<20;j++)
+	   {
+	   	cout<<ogrenci[i][j]<<endl;
+	   }
+	    
+	 }
+	 
+     cout<<"--------------------------------------"<<endl;
+	 cout<<endl;
+	cout<<ogrenci[0]<<endl;//sifirinci indisteki elemani yazdi 
+	cout<<ogrenci[0][3];//sifirinci indisteki elemanin 3. karaekterini yazdi
+	
+	return 0;
+}
