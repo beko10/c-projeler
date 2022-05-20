@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+//sayiyi ters ceviren program
+
+int main( ) {
+    int sayi,ysayi;
+	cin>>sayi;
+	cout<<"sayinin ters hali:";
+	for(int i=0;i<5;i++)
+	{
+	ysayi=sayi%10;
+	sayi=sayi/10;
+	cout<<ysayi;
+	}
+
+			   
+	return 0;
+}
