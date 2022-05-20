@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+//mukemmel sayi programi
+int main( ) {
+int sayi;
+cout<<"lutfen bir sayi giriniz";cin>>sayi;
+int toplam=0;
+for(int i=1;i<sayi;i++)
+{
+	if(sayi%i==0)
+	{
+		toplam+=i;
+	}
+}
+if(toplam==sayi)
+{
+	cout<<"girdiginiz sayi mukemmeldir";
+}
+else 
+cout<<"girdiginiz sayi mukemmel degil";
+	return 0;
+}
