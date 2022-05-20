@@ -1,0 +1,30 @@
+#include <iostream>                                                                                                             
+
+using namespace std;
+// palindrom sayisi bulma programı 
+
+int main() {
+	int sayi,onbinler,binler,yuzler,onlar,birler;
+	cout<<"lutfen 5 basamakli bir sayi giriniz";cin>>sayi;
+	
+   birler=sayi%10;
+   
+   sayi=sayi/10;
+   onlar=sayi%10;
+   
+   sayi=sayi/10;
+   yuzler=sayi%10;
+   
+   sayi=sayi/10;
+   binler=sayi%10;
+   
+   sayi=sayi/10;
+   onbinler=sayi;
+    
+    if(birler==onbinler && onlar==binler)
+    {
+    	cout<<"palindrom sayisi girdiniz";
+	}
+	else 
+	cout<<"girdiginiz sayi palindrom sayisi degil";
+} 
