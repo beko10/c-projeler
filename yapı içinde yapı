@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+//yapi içinde yapi
+struct sinav
+{
+	int vize;
+	int final;
+};
+struct ogrenci
+{
+	string isim;
+	int no;
+	int vize;
+	sinav sinavnotlari;
+};
+int main() {
+	ogrenci ogr;
+	ogr.isim="berkay";
+	ogr.no=10;
+	ogr.sinavnotlari.vize=50;
+	ogr.sinavnotlari.final=60;
+	cout<<"ogrencinin adi:"<<ogr.isim<<endl;
+	cout<<"ogrencinin numarasi:"<<ogr.no<<endl;
+	cout<<"ogrencinin vize notu:"<<ogr.sinavnotlari.vize<<endl;
+	cout<<"ogrencinin final notu:"<<ogr.sinavnotlari.final<<endl;
+	return 0;
+}
