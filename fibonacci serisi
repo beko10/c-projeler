@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main( ) {
+	int a=1,b=1,c,sayi;
+	cout<<"lutfen fibonacci dizisinin kac elemandan olusamsini istediginiz degeri girin";cin>>sayi;
+	cout<<a<<" "<<b;
+	for(int i=1;i<sayi;i++)
+	{
+		c=a+b;
+		a=b;
+		b=c;
+		cout<<" "<<c<<" ";
+	}
+	
+	
+	return 0;
+}
+	
