@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+// bir aracin km başina ne kadar harcadıgini gosteren program
+int main( ) {
+	int km;
+	double const yuzkmalti=0.4;
+	double const yuzkmustu=0.3;
+    double ucret;
+    cout<<"lutfen kac km gittiginizi girin";cin>>km;
+    if(km<=100)
+    {
+    	ucret=km*yuzkmalti;
+	}
+	else
+	{
+		ucret=100*yuzkmalti;//burada 100 km ye kadar harcadıgi fiyat bulundu
+		ucret+=(km-100)*yuzkmustu;//burada 100 km kadar harcadigi fiyat 100 km ustu harcadigi fiyat toplanarak 100 km ustu fiyat bulundu
+	}
+	cout<<"toplam ucret="<<ucret<<"TL";
+	return 0;
+	}
