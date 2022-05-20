@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int faktoriyel(int sayi) // recursive fonksiyon
+{
+	if(sayi>0)
+	{
+		return sayi * faktoriyel(sayi-1);
+	}
+	
+	else 
+	return 1;
+}
+int main() {
+      int a,sonuc;
+      cin>>a;
+      sonuc=faktoriyel(a);
+     cout<<sonuc;
+	return 0;
+}
