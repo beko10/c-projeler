@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    int boyut;
+    cout<<"lutfen dizinin eleman sayisini girin";cin>>boyut;
+    int dizi[boyut];
+    for(int i=0;i<boyut;i++)
+    {
+    	cout<<"dizi("<<i<<")=";cin>>dizi[i];
+	}
+	cout<<endl;
+    cout<<"girdiginiz dizidekei elemanlarin ram'deki adresleri yerleri"<<endl;
+    for(int i=0;i<boyut;i++)
+    {
+    	int *ptr=&dizi[i];
+    	cout<<ptr<<endl;
+	}
+return 0;
+    
+}
