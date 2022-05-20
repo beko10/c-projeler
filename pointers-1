@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// pointers
+
+int main() {
+    int sayi = 10;
+    cout<<"sayinin degeri="<<sayi<<endl;
+    cout<<"sayinin bellekteki adresi="<<&sayi<<endl;
+    int *ptr;
+    ptr=&sayi;
+    cout<<"pointirin bellekte gosterdigi adres="<<ptr<<endl;
+    cout<<"pointirin bellekte gosterdigi deger="<<*ptr<<endl;
+    cout<<"pointirin bellekteki adresi="<<&ptr;
+return 0;
