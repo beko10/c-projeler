@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+//klavyeden girilen sayilarin oranını pozitif negatif oranini bulma 
+int main( ) {
+	int sayi,pozitif=0,negatif=0,sifir=0;
+	cout<<"lutfen sayi kac adet sayi girmek istediginizi girin";cin>>sayi;
+	for(int i=0;i<sayi;i++)
+	{
+		int s;
+		cout<<i+1<<" .sayiyi girin";cin>>s;
+		if(s>0)
+		{
+		  pozitif++;
+		}
+		else if(sayi<0)
+		{
+			negatif++;
+		}
+		else
+		sifir++;
+		
+		
+	}
+	cout<<"pozitifler:"<<pozitif/sayi<<endl;
+		cout<<"negatif:"<<negatif/sayi<<endl;
+		cout<<"sifir:"<<sifir/sayi<<endl;
+	
+		return 0;
+}
