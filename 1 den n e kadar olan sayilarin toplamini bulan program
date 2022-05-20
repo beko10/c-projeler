@@ -1,0 +1,22 @@
+// 1 den n e kadar olan sayilarin toplamini bulan program
+#include <iostream>
+using namespace std;
+
+int main() {
+	int sondeger,toplam=0;
+	cout<<"lutfen son degeri giriniz...";cin>>sondeger;
+	for(int i=1;i<=sondeger;i++)
+	{
+		toplam=toplam+i;
+	}
+	cout<<" 1 den "<<sondeger<<" e kadar olan sayilarin toplami="<<toplam;
+
+#include <iostream>
+using namespace std;
+/
+int main() {
+	int n;
+	cout<<"1 ' den kaca kadar  sayilari toplayalim..... ";cin >>n  ;
+    cout<<" 1 ' den "<<n<<" ' e kadar olan sayilarin toplami="<<n*(n+1)/2;
+    system("pause");
+}
