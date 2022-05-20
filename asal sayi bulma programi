@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+// asal sayi bulma programi
+int main( ) {
+int sayi,sonuc=0;
+cout<<"lutfen sayi giriniz";cin>>sayi;
+for(int i=2;i<sayi;i++)
+{
+	if(sayi%i==0)
+	{
+		
+		sonuc=1;
+		break;
+	}
+}
+	if(sonuc==0)
+	{
+		cout<<"asal sayi girdiniz";
+	}
+	else
+	cout<<"girdiginiz sayi asal sayi degil";
+	return 0;
+}
