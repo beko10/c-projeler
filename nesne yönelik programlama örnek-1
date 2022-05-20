@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+//sinif
+class dikdortgen 
+{
+	public:
+     int kisa_kenar;
+	 int uzun_kenar; 
+	 
+	 void alan()
+	 {
+	 	cout<<"dikdortgenin alani="<<kisa_kenar*uzun_kenar<<endl;
+	 }
+	 void cevre()
+	 {
+	 	cout<<"dikdortgenin cevresi="<<2*(kisa_kenar+uzun_kenar)<<endl;
+	 }
+};
+
+
+int main() {
+	dikdortgen d1;
+
+   
+	cout<<"lutfen dikdortgenin kisa kenarini girin";cin>>d1.kisa_kenar;
+	cout<<"lutfen dikdortgenin uzun kenarini girin";cin>>d1.uzun_kenar;
+
+	d1.alan();
+    d1.cevre();
+   system("pause");
+    
+   
+	return 0;
+}
