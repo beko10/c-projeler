@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+    int dizi[3]={1,2,3};
+    //int *ptr=&dizi[0];
+    // ptr=&dizi[0];
+    int *ptr=dizi;
+    cout<<"dizinin 0. indisindeki elemani="<<*ptr<<endl;
+    cout<<"dizinin 0. indisindeki elemani="<<dizi[0]<<endl;
+    cout<<"dizinin 0. indisindeki elemani="<<ptr[0]<<endl;
+    cout<<"dizinin 0. elemanininin bellekteki adresi="<<ptr<<endl;
+    ptr[2]=120;
+    cout<<dizi[2]<<endl;
+    cout<<ptr[2];
+    
+	return 0;
+}
+
