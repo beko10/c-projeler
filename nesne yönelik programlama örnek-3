@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+
+class dikdortgen 
+{
+	public:
+		int kisa_kenar;
+		int uzun_kenar;
+		
+		void alan()
+		{
+			int sonuc;
+			sonuc=kisa_kenar*uzun_kenar;
+			cout<<"dikdortegenin alani ="<<sonuc<<endl;
+		}
+		void cevre()
+		{
+			cout<<"dikdortgenin cevresi ="<<2*(kisa_kenar+uzun_kenar)<<endl;
+		}
+};
+
+int main() {
+  dikdortgen d1;
+  cout<<"lutfen dikdortgenin kisa kenarini giriniz:";cin>>d1.kisa_kenar;
+  cout<<"lutfen dikdortgenin uzun kenarini giriniz:";cin>>d1.uzun_kenar;
+  int secim;
+  cout<<"lufen aşagidaki yazilan bilgilere gore seciminizi yapiniz"<<endl;
+  cout<<"dikdortgenin alanini hesaplamak icin lutfen 1 ' e basiniz "<<endl;
+   cout<<"dikdortgenin cevresini hesaplamak icin lutfen 2 ' e basiniz "<<endl;
+    cout<<"dikdortgenin alanini ve cevresini hesaplamak icin lutfen 3 ' e basiniz "<<endl;
+     bas:cin>>secim;
+    switch(secim)
+    {
+    	case 1:
+    		d1.alan();
+    		break;
+    		case 2:
+    		d1.cevre();
+			break;
+			case 3:
+			d1.alan();
+			d1.cevre();
+			break;
+			default:
+			cout<<"lutfen dogru secim yapiniz......\n secim menüsüne yönlendiriyorsunuz"<<endl;	
+	}
+      goto bas;
+	return 0;
+}
