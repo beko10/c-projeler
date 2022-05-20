@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+// yapıci  fonks
+class sayilar
+{
+	public:
+		int x,y,z;
+		sayilar()//yapici fonk(yapici fonksiyonlar sinif adi ile ayni olmali) sayesinde sinif içindeki degiskenlerimizze baslangic degeri atadik
+		{         //normalde sinif içinde degiskenlere baslangic degeri atanamaz
+			x=1;
+			y=2;
+			z=3;
+		}
+};
+
+int main() {
+sayilar s1;
+cout<<s1.x<<endl;
+cout<<s1.y<<endl;
+cout<<s1.z<<endl;
+	return 0;
+}
