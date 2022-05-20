@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main ( ) {
+	//girilen sayinin armstrong sayiyisi olup olmadigini bulan program
+	int sayi,yuzler,onlar,birler;
+	cout<<"lutfen bir sayi giriniz";
+	cin>>sayi;
+	yuzler=(sayi/100)%10;
+	onlar=(sayi/10)%10;
+	birler=sayi%10;
+	int toplam;
+	toplam=(yuzler*yuzler*yuzler)+(onlar*onlar*onlar)+(birler*birler*birler);
+	if(sayi==toplam)
+	{
+		cout<<"armstrong sayisi girdiniz";
+		
+	}
+	else 
+	cout<<"girdiginiz sayi armstrong degildir";
+	return 0;
+}
