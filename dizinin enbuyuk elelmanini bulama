@@ -1,0 +1,34 @@
+//dizinin enbuyuk elelmanini bulama
+
+#include <iostream>
+#include <string.h> 
+ using namespace std;
+
+void enbuyuk(int dizi[],int boyut)
+{
+	int buyuk=dizi[0];
+	for(int i=0;i<boyut;i++)
+	{
+		
+		if(dizi[i]>buyuk)
+		{
+			buyuk=dizi[i];
+			
+		}
+	}
+	cout<<buyuk;
+}
+
+int main() {
+  int eleman;
+  cout<<"lutfen kac elemanli dizi girmek istediginizi girin";
+  cin>>eleman;
+  int sayidizi[eleman];
+  for(int i=0;i<eleman;i++)
+  {
+  	cin>>sayidizi[i];
+  }
+  
+  cout<<"girdiginiz dizideki enbuyuk eleman:";enbuyuk(sayidizi,eleman);
+	return 0;
+}
