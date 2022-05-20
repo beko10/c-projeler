@@ -1,0 +1,82 @@
+#include <iostream>
+
+
+// atm programi
+using namespace std;
+int main() {
+	int bakiye=1000;
+	int sifre=1234;
+	int sifre_deneme=0;
+	int islem,tutar;
+	
+     
+	 while(sifre_deneme<3)
+	 {
+	 	sifre:cout<<"lutfen sifrenizi girin";cin>>sifre;
+	 	sifre_deneme++;
+	 	
+	 	if(sifre_deneme==3)
+	 	{
+	 			cout<<"sifrenizi 3 kere yanlis girdiniz 1 saat islem yapamazsiniz..."<<endl;Sleep(1000);
+	 		   exit(0);//break
+		 }
+	 	
+	 	
+       	 		if(sifre==1234)
+	{
+		cout<<"kart sifreniz dogru atm menusune aktariliyorsunuz...."<<endl;
+   
+		
+			cout<<"para yatirmak icin lutfen 1 ' e basin"<<endl;
+	cout<<"para cekmek icin lutfen 2 ' e basin"<<endl;
+	cout<<"bakiye sorgulamasi icin lutfen 3 ' e basin"<<endl;
+	cout<<"kart iadesi  icin lutfen 4 ' e basin"<<endl;
+	
+	while(islem!=4)
+	{
+		cout<<"lutfen yapmak istedginiz islemi girin...."<<endl;
+		cin>>islem;
+		
+		switch(islem)
+		{
+			case 1:
+			cout<<"lutfen yatiracaginiz para miktarini girin...";
+			cin>>tutar;
+			bakiye+=tutar;
+			cout<<"guncel bakiyeniz : "<<bakiye;
+			break; 
+			
+			case 2:
+				cout<<"lutfen cekeceginiz para miktarini girin..."<<endl;
+				cin>>tutar;
+				if(tutar>1000)
+				{
+					cout<<"yetersiz bakiye..."<<endl;
+					cout<<"lutfen tekrar cekeceginiz para tutarini girin : ";
+					cin>>tutar;
+				}
+				bakiye-=tutar;
+				cout<<"guncel bakiyeniz : "<<bakiye;
+				break;
+				
+				case 3:
+					cout<<"bankamizda bulunan mevcut bakiyeniz : "<<bakiye;
+					break;
+					
+					case 4:
+						cout<<"kart iadesi isleminiz gerceklestiriliyor.....";
+		}
+		break;
+	}
+	}
+     else 
+     {
+     	cout<<"sifreniz yanlis girdiniz lutfen sifrenizi tekrar girin..."<<endl;
+     	goto sifre;
+	 }
+	 	
+		 
+	 }	
+
+	return 0;
+}
