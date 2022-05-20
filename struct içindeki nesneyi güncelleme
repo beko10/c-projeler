@@ -1,0 +1,25 @@
+include <iostream>
+
+using namespace std;
+struct ogrenci //yapi oluşturuldu
+{
+	string isim;
+	int no;
+	
+};
+void isimDegistir(ogrenci *isimidegisecek, string konulacakisim) //isimdegistirme fonk tanimlandi ve alacagi paramaetreler belirlendi
+{
+	isimidegisecek->isim=konulacakisim; //-> işareri ismi degistirilecek adrese git o adres içindeki ogrencinin isimini degistir demek
+	cout<<konulacakisim;//degisen isim yazdirildi
+}
+int main() {
+	ogrenci ogr;
+	ogr.isim="omer";//ogr nesnesine el ile isim atamasi yapildi 
+	cout<<ogr.isim<<endl;//atanan isim bastirildi
+	isimDegistir(&ogr,"berkay");//isimdegistir fonk(parametre olarak ogr nesnesinin ram'deki adresi ve konulacak isim) çagirildi ve isim degistirildi
+	
+	//	cin>>ogr.isim;
+	//isimDegistir(&ogr,ogr.isim);
+		
+	return 0;
+}
