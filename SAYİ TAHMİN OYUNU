@@ -1,0 +1,46 @@
+#include <iostream>
+#include <conio.h>
+#include <stdlib.h>
+#include <time.h>
+//ikili arama 
+using namespace std;
+// SAYİ TAHMİN OYUNU
+ 
+
+int main( ) {
+	int pc,tahmin,secim;
+	srand(time(NULL));
+	pc=rand() % 15 + 1;
+	if(pc  <=   8  )
+	{
+		cout<<" tahminizi 8 den kucuk yapin..."<<endl;
+	}
+	else if( pc > 8)
+	{
+		cout<<"tahminizi 8 den kucuk yapin"<<endl;
+	}
+     cout<<"lutfen tahmininizi girin"<<endl;
+	cin>>tahmin;
+	while (true )
+	{
+		if(tahmin==pc)
+		{
+			cout<<"sayiyi dogru tahmin ettiniz ";
+			break;
+			
+		}
+		else if(tahmin > pc)
+		{
+			cout<<"tahmininiz bilgisayararin urettigi sayidan buyuk lutfen daha kucuk bir sayi giriniz..."<<endl;
+			cin>>tahmin;
+		}
+		else if (tahmin < pc)
+		{
+			cout<<"tahmininiz bilgisayararin urettigi sayidan kucuk lutfen daha buyuk bir sayi giriniz..."<<endl;
+			cin>>tahmin;
+		}
+		
+		
+	}
+	return 0;
+}
