@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+struct ogrenci
+{
+	string isim;
+	int no;
+};
+
+int main() {
+	ogrenci ogr[2];
+	ogr[0].isim="berkay";
+	ogr[0].no=10;
+	ogr[1].isim="ali";
+	ogr[1].no=20;
+	cout<<ogr[0].isim<<endl;
+	cout<<ogr[0].no<<endl;
+	cout<<ogr[1].isim<<endl;
+	cout<<ogr[1].no<<endl;
+	return 0;
+}
