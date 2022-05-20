@@ -1,0 +1,68 @@
+#include <iostream>
+
+using namespace std;
+
+class ogrenci
+{
+	public:
+     string isim;
+     string soy_isim;
+     int okul_no;
+     int vize;
+     int final;
+      
+      void bilgiGir()
+      {
+      	cout<<"lutfen ogrencinin adini girin : ";cin>>isim;
+      	cout<<"lutfen ogrencinin soy adinini girin : ";cin>>soy_isim;
+      	cout<<"lutfen ogrencinin okul numarasanini girin : ";cin>>okul_no;
+      	cout<<"lutfen ogrencinin vize notunu girin : ";cin>>vize;
+      	cout<<"lutfen ogrencinin final notunu girin : ";cin>>final;
+	  }
+	  
+	  float ortalamaBul(int vze,int fnl)
+	  {
+	  	int ort;
+	  	ort=vze*0.4+fnl*0.6;
+	  	return ort;
+	  }
+	  void kontrol(int a)
+	  {
+	  	if(a<50)
+	  	{
+	  		cout<<"sinifta kaldi..."<<endl;
+		  }
+		  else 
+		  {
+		  	cout<<"gecti...";
+		  }
+	  }
+	  void bilgiYaz()
+	  {
+	  	cout<<"ogrencinin adi : "<<isim<<endl;
+	  	cout<<"ogrencinin soyadi : "<<soy_isim<<endl;
+	  	cout<<"ogrencinin numarasi : "<<okul_no<<endl;
+	  	cout<<"ogrencinin vize notu : "<<vize<<endl;
+	  	cout<<"ogrencinin final notu : "<<final<<endl;
+	  	cout<<"ogrencinin ortealamasi : "<<ortalamaBul(vize,final)<<endl;
+	  	kontrol(ortalamaBul(vize,final));
+	  }
+
+
+};
+
+int main() {
+	int eleman;
+	cout<<"ogrenci otomasyaonuna kac adet ogrenci bilgisi kaydetmek istediginizi girin : ";cin>>eleman;
+	ogrenci ogr[eleman];
+	for(int i=0;i<eleman;i++)
+	{
+	  ogr[i].bilgiGir();
+	  	
+	}
+	cout<<"***kayit edilen ogrenci bilgileri*****"<<endl;
+	for(int i=0;i<eleman;i++)
+	{
+		ogr[i].bilgiYaz();
+	}
+	return 0;
