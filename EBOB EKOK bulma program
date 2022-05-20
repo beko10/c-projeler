@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+// EBOB EKOK bulma program
+int main( ) {
+int sayi1,sayi2,buyuksayi;
+cout<<"birinci sayiyi girin";cin>>sayi1;
+cout<<"ikinci sayiyi girin";cin>>sayi2;
+for(int i=1;i<=sayi1*sayi2;i++)
+{
+	if((i%sayi1==0)&&(i%sayi2==0))
+	{
+		cout<<"EKOK:"<<i;
+		break;
+	}
+	}
+cout<<endl;
+if(sayi1>sayi2)
+	{
+		buyuksayi=sayi1;
+	}
+	else
+	{
+		buyuksayi=sayi2;
+	}
+	for(buyuksayi;buyuksayi>0;buyuksayi--)
+	{
+		if((sayi1%buyuksayi==0)&&(sayi2%buyuksayi==0))
+		{
+			cout<<"EBOB:"<<buyuksayi;
+			break;
+		}
+	}
+return 0;
+}
