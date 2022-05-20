@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+//yıkıcı metot 
+class ogrenciler
+{
+	private:
+		string isim,soyisim;
+		int no;
+		public:
+			ogrenciler(string isim,string soyisim,int no)
+			{
+				this->isim=isim;//this anahtar kelimesi ile sinifreki degişkeni fonksiyon daki degişkene atadik
+				this->soyisim=soyisim;//(this kelimesini kullanma amacimiz siniftadki degişkenle fonk degişkenleri ayni oldugu icin this anahtar kelimesini kullandik)
+				this->no=no;//kullanmasaydik derleyici degişkenleri ayırt edemezdi
+			}
+			ogrenciler()
+			{
+				isim="ali";
+				soyisim="veli";
+				no=30;
+			}
+			
+			~ogrenciler()//yıkıcı metot
+			{
+				cout<<"obje silindi"<<endl;
+			}
+			
+			void ogrenciBilgileriniGoster()
+			{
+				cout<<"isim "<<isim<<endl;
+				cout<<"soyaisim "<<soyisim<<endl;
+				cout<<"numara "<<no<<endl;
+				cout<<"--------------------------"<<endl;
+			}
+};
+
+
+
+
+int main() {
+  
+  ogrenciler *ogr=new ogrenciler("berkay","kaplan",20);
+  ogr->ogrenciBilgileriniGoster();
+   delete ogr;
+	
+	return 0;
+}
