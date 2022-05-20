@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+// fonksiyonla basamaklara ayiran ve klavyeden basşşlangiç ve bitis degerlerini alan program
+void basamak(int bs,int bt)
+{
+	int yuzler,onlar,birler;
+	for(int i=bs;i<=bt;i++)
+	{
+		yuzler=(i/100)%10;
+		onlar=(i/10)%10;
+		birler=i%10;
+		cout<<"yzuler basamagi:"<<yuzler<<" onlar basamagi:"<<onlar<<" birler basamagi:"<<birler<<endl;
+		if(i%10==0)
+		{
+			cout<<"\n--------------\n"<<endl;
+		}
+	}
+	
+}
+int main( ) {
+	 int sayi1,sayi2;
+	 cout<<"lutfen baslangic degerini girin";cin>>sayi1;
+	 cout<<"lutfen bitis degerini girin";cin>>sayi2;
+	 cout<<"--------------------------------------------"<<endl;
+	 basamak(sayi1,sayi2);
+		return 0;
+	}
